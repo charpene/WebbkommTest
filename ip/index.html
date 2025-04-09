@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP</title>
+</head>
+<body>
+    <h1 id="ip"></h1>
+
+<script>
+
+    (async () => {
+        const resp = await fetch('http://vm4430.kaj.pouta.csc.fi:8082/');
+        const respJson = await resp.json();
+
+        document.querySelector('#ip').innerHTML = respJson.ip;
+    })();
+</script>
+    
+</body>
+</html>
